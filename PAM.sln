@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PAM", "PAM\PAM.csproj", "{77D64038-F961-4282-84C3-F74F3131A456}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{77D64038-F961-4282-84C3-F74F3131A456}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77D64038-F961-4282-84C3-F74F3131A456}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77D64038-F961-4282-84C3-F74F3131A456}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77D64038-F961-4282-84C3-F74F3131A456}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

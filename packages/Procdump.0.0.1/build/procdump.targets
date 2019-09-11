@@ -1,0 +1,20 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProcdumpName>procdump.exe</ProcdumpName>
+    <Procdump64Name>procdump64.exe</Procdump64Name>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ProcdumpSrcPath>$(MSBuildThisFileDirectory)..\bin\$(ProcdumpName)</ProcdumpSrcPath>
+    <Procdump64SrcPath>$(MSBuildThisFileDirectory)..\bin\$(Procdump64Name)</Procdump64SrcPath>
+    <ProcdumpTargetPath Condition=" '$(ProcdumpTargetPath)' == '' ">$(TargetDir)</ProcdumpTargetPath>
+  </PropertyGroup>
+
+  <Target Name="CopyProcdumpToBin" BeforeTargets="AfterBuild">
+    <Copy SourceFiles="$(ProcdumpSrcPath)" DestinationFiles="$(ProcdumpTargetPath)$(ProcdumpName)" SkipUnchangedFiles="true"></Copy>
+    <Copy SourceFiles="$(Procdump64SrcPath)" DestinationFiles="$(ProcdumpTargetPath)$(Procdump64Name)" SkipUnchangedFiles="true"></Copy>
+  </Target>
+  <Target Name="DeleteProcdumpFromBin" BeforeTargets="AfterClean">
+    <Delete Files="$(ProcdumpTargetPath)$(ProcdumpName)"></Delete>
+    <Delete Files="$(ProcdumpTargetPath)$(Procdump64Name)"></Delete>
+  </Target>
+</Project>
